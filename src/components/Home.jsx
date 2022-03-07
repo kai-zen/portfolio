@@ -28,12 +28,34 @@ const HomePage = () => {
         in={checked}
         {...(checked ? { timeout: 1500 } : {})}
         collapsedHeight={0}
+        sx={{ width: '100%' }}
       >
         <Typography
           sx={{
             color: '#fff',
             fontFamily: 'Lobster',
             textAlign: 'center',
+            display: { xs: 'none', sm: 'block' },
+          }}
+          variant="h1"
+        >
+          <span
+            style={{
+              color: cyan[400],
+            }}
+          >
+            We
+          </span>
+          lcome to
+          <br />
+          my site.
+        </Typography>
+        <Typography
+          sx={{
+            color: '#fff',
+            fontFamily: 'Lobster',
+            textAlign: 'center',
+            display: { xs: 'block', sm: 'none' },
           }}
           variant="h2"
         >

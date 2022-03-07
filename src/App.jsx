@@ -1,6 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
 import HomePage from './components/Home';
-import { createTheme, Paper } from '@mui/material';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
+import { createTheme } from '@mui/material';
 import { amber, cyan } from '@mui/material/colors';
 import Layout from './components/layout';
 
@@ -22,12 +23,14 @@ function App() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
-      <Paper>
+    <Router>
+      <ThemeProvider theme={theme}>
         <Layout />
-        <HomePage />
-      </Paper>
-    </ThemeProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </ThemeProvider>
+    </Router>
   );
 }
 
