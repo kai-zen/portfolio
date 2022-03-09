@@ -16,10 +16,11 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
-import { Box } from '@mui/system';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
-export default function TopBar({ activeItem }) {
+export default function TopBar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -43,22 +44,14 @@ export default function TopBar({ activeItem }) {
             color: '#fff',
             fontSize: '1.3rem',
             fontFamily: 'Dancing Script',
+            cursor: 'pointer',
+          }}
+          onClick={() => {
+            navigate('/');
           }}
         >
           Ali Razipur
         </Typography>
-        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-          <Typography
-            sx={{ m: '18px 26px', opacity: '.65' }}
-            className={'layout-menu active'}
-          >
-            Home
-          </Typography>
-          <Typography sx={{ m: '18px 0', opacity: '.65' }}>Projects</Typography>
-          <Typography sx={{ m: '18px 26px', opacity: '.65' }}>
-            Skills
-          </Typography>
-        </Box>
         <IconButton onClick={handleClick}>
           <Sort
             sx={{
@@ -81,32 +74,47 @@ export default function TopBar({ activeItem }) {
             horizontal: 'right',
           }}
         >
-          <MenuItem onClick={handleClose}>
+          <MenuItem
+            onClick={() => {
+              navigate('/');
+              handleClose();
+            }}
+          >
             <ListItemIcon>
               <Home fontSize="small" />
             </ListItemIcon>
             Home
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem
+            onClick={() => {
+              navigate('/projects');
+              handleClose();
+            }}
+          >
             <ListItemIcon>
               <InsertDriveFile fontSize="small" />
             </ListItemIcon>
             Projects
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem
+            onClick={() => {
+              navigate('/skills');
+              handleClose();
+            }}
+          >
             <ListItemIcon>
               <Snowboarding fontSize="small" />
             </ListItemIcon>
             Skills
           </MenuItem>
           <Divider />
-          <MenuItem onClick={handleClose}>
+          <MenuItem>
             <ListItemIcon>
               <Email fontSize="small" />
             </ListItemIcon>
             alirazipur2001@gmail.com
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem>
             <ListItemIcon>
               <Phone fontSize="small" />
             </ListItemIcon>

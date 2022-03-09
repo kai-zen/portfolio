@@ -42,7 +42,14 @@ const ToDo = () => {
           My project has more options than what the youtube channel shows but
           here is the actual owner:
           <br />
-          <Link>Source code</Link>
+          <Link
+            onClick={() => {
+              window.open('https://food-palace-2.netlify.app', '_blank');
+            }}
+            sx={{ cursor: 'pointer' }}
+          >
+            Source code
+          </Link>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

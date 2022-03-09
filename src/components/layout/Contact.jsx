@@ -50,6 +50,7 @@ const Contact = () => {
         }}
         onClick={() => {
           setOpen(!open);
+          window.open('https://github.com/kai-zen', '_blank');
         }}
       >
         <GitHub />
@@ -71,6 +72,10 @@ const Contact = () => {
         }}
         onClick={() => {
           setOpen(!open);
+          window.open(
+            'https://linkedin.com/in/ali-razipur-037893225',
+            '_blank'
+          );
         }}
       >
         <LinkedIn />
@@ -92,6 +97,7 @@ const Contact = () => {
         }}
         onClick={() => {
           setOpen(!open);
+          window.open('https://www.instagram.com/ali.razipur/', '_blank');
         }}
       >
         <Instagram />

@@ -44,11 +44,28 @@ const Crypto = () => {
           <br />
           1.React + Axios
           <br />
-          <Link>Source code</Link>
+          <Link
+            onClick={() => {
+              window.open(
+                'https://github.com/kai-zen/crypto-tracker',
+                '_blank'
+              );
+            }}
+            sx={{ cursor: 'pointer' }}
+          >
+            Source code
+          </Link>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained">Visit</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open('https://my-todo-list-redux.netlify.app', '_blank');
+          }}
+        >
+          Visit
+        </Button>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
