@@ -4,7 +4,7 @@ import { createTheme } from '@mui/material';
 import { amber, cyan } from '@mui/material/colors';
 import Layout from './components/layout';
 import Projects from './components/projects';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Skills from './components/skills';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     },
   });
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider theme={theme}>
         <Layout />
         <Routes>
@@ -34,7 +34,7 @@ function App() {
           <Route path="/Skills" element={<Skills />} />
         </Routes>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
