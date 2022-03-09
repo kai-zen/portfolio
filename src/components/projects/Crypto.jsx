@@ -61,7 +61,7 @@ const Crypto = () => {
         <Button
           variant="contained"
           onClick={() => {
-            window.open('https://my-todo-list-redux.netlify.app', '_blank');
+            window.open('https://github.com/kai-zen/crypto-tracker', '_blank');
           }}
         >
           Visit
