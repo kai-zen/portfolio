@@ -1,0 +1,83 @@
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Button, Chip, Link } from '@mui/material';
+import { Box } from '@mui/system';
+
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
+const Crypto = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <Card>
+      <CardHeader
+        title="3. Crypto price tracker"
+        subheader="December 1, 2021"
+      />
+      <CardMedia component="img" image="/images/crypto.png" />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          My first experience working with APIs
+          <br />
+          <br />
+          1.React + Axios
+          <br />
+          <Link>Source code</Link>
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <Button variant="contained">Visit</Button>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>About this project:</Typography>
+          <Typography paragraph>
+            I didn't have any experience with APIs so it was more like a
+            practice than a project.
+            <br />
+            Styling and UI are all only CSS and HTML and I made it step by step
+            with the actual owner of this project which is a youtuber
+          </Typography>
+          <Box>
+            <Chip label="React.js" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="CSS" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="HTML" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="axios" sx={{ mr: 1, mb: 1 }} size="small" />
+          </Box>
+        </CardContent>
+      </Collapse>
+    </Card>
+  );
+};
+
+export default Crypto;

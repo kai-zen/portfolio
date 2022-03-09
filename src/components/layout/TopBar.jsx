@@ -8,9 +8,10 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
+import { Box } from '@mui/system';
 import { useState } from 'react';
 
-export default function TopBar() {
+export default function TopBar({ activeItem }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -25,11 +26,12 @@ export default function TopBar() {
         sx={{
           width: '80%',
           margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'space-between',
         }}
       >
         <Typography
           sx={{
-            flexGrow: '1',
             color: '#fff',
             fontSize: '1.3rem',
             fontFamily: 'Dancing Script',
@@ -37,6 +39,18 @@ export default function TopBar() {
         >
           Ali Razipur
         </Typography>
+        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+          <Typography
+            sx={{ m: '18px 26px', opacity: '.65' }}
+            className={'layout-menu active'}
+          >
+            Home
+          </Typography>
+          <Typography sx={{ m: '18px 0', opacity: '.65' }}>Projects</Typography>
+          <Typography sx={{ m: '18px 26px', opacity: '.65' }}>
+            Skills
+          </Typography>
+        </Box>
         <IconButton onClick={handleClick}>
           <Sort
             sx={{

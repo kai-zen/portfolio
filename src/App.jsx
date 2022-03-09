@@ -1,9 +1,11 @@
 import { ThemeProvider } from '@emotion/react';
 import HomePage from './components/Home';
-import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import { createTheme } from '@mui/material';
 import { amber, cyan } from '@mui/material/colors';
 import Layout from './components/layout';
+import Projects from './components/projects';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Skills from './components/skills';
 
 function App() {
   const theme = createTheme({
@@ -18,19 +20,21 @@ function App() {
     },
     typography: {
       allVariants: {
-        fontFamily: 'Roboto Slab',
+        fontFamily: 'Fredoka',
       },
     },
   });
   return (
-    <Router>
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
         <Layout />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/Skills" element={<Skills />} />
         </Routes>
       </ThemeProvider>
-    </Router>
+    </BrowserRouter>
   );
 }
 
