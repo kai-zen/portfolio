@@ -26,9 +26,9 @@ const Skills = () => {
             color="primary"
           >
             My Skills
-            <Divider sx={{ width: '75vw' }} />
-            <Divider sx={{ width: '75vw' }} />
-            <Divider sx={{ width: '75vw' }} />
+            <Divider sx={{ width: '100%' }} />
+            <Divider sx={{ width: '100%' }} />
+            <Divider sx={{ width: '100%' }} />
           </Typography>
         </Grid>
         <SkillsGrid />

@@ -41,16 +41,40 @@ export default function MainCard() {
           <br />
           1.React + Redux
           <br />
-          <Link>Source code</Link>
+          <Link
+            onClick={() => {
+              window.open('https://github.com/kai-zen/food-palace-2', '_blank');
+            }}
+            sx={{ cursor: 'pointer' }}
+          >
+            Source code
+          </Link>
           <br />
           <br />
           2.Next.js + Mongo db
           <br />
-          <Link>Source code</Link>
+          <Link
+            onClick={() => {
+              window.open(
+                'https://github.com/kai-zen/next-food-palace-2',
+                '_blank'
+              );
+            }}
+            sx={{ cursor: 'pointer' }}
+          >
+            Source code
+          </Link>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained">Visit</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open('https://food-palace-2.netlify.app', '_blank');
+          }}
+        >
+          Visit
+        </Button>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

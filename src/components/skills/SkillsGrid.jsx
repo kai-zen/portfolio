@@ -46,7 +46,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Javascript" number={65} />
+          <CircularPercent text="Javascript" number={55} />
         </Grid>
         <Grid
           xs={6}
@@ -60,7 +60,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="React" number={70} />
+          <CircularPercent text="React" number={65} />
         </Grid>
         <Grid
           xs={6}
@@ -74,7 +74,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Next JS" number={60} />
+          <CircularPercent text="Next JS" number={50} />
         </Grid>
         <Grid
           xs={6}
@@ -88,7 +88,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Bootstrap" number={95} />
+          <CircularPercent text="Bootstrap" number={85} />
         </Grid>
         <Grid
           xs={6}
@@ -102,7 +102,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="MUI" number={85} />
+          <CircularPercent text="MUI" number={70} />
         </Grid>
         <Grid
           xs={6}

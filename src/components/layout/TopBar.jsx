@@ -1,6 +1,14 @@
-import { Home, InsertDriveFile, Snowboarding, Sort } from '@mui/icons-material';
+import {
+  Email,
+  Home,
+  InsertDriveFile,
+  Phone,
+  Snowboarding,
+  Sort,
+} from '@mui/icons-material';
 import {
   AppBar,
+  Divider,
   IconButton,
   ListItemIcon,
   Menu,
@@ -90,6 +98,19 @@ export default function TopBar({ activeItem }) {
               <Snowboarding fontSize="small" />
             </ListItemIcon>
             Skills
+          </MenuItem>
+          <Divider />
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <Email fontSize="small" />
+            </ListItemIcon>
+            alirazipur2001@gmail.com
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <Phone fontSize="small" />
+            </ListItemIcon>
+            +98 991 716 6019
           </MenuItem>
         </Menu>
       </Toolbar>

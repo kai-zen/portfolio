@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -11,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button, Chip, Link } from '@mui/material';
 import { Box } from '@mui/system';
+import { useState } from 'react';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -24,7 +24,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function FoodPalace() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -43,11 +43,25 @@ export default function FoodPalace() {
           something is missing about bootstrap grid)
           <br />
           <br />
-          <Link>Source code</Link>
+          <Link
+            onClick={() => {
+              window.open('https://github.com/kai-zen/food-palace', '_blank');
+            }}
+            sx={{ cursor: 'pointer' }}
+          >
+            Source code
+          </Link>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained">Visit</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open('https://food-palace-1.netlify.app', '_blank');
+          }}
+        >
+          Visit
+        </Button>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

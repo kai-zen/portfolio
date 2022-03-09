@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router';
 import MyLayout from './layout';
 
 const HomePage = () => {
-  const [checked, setChecked] = useState(false);
   const navigate = useNavigate();
+  const [checked, setChecked] = useState(false);
   useEffect(() => {
     setChecked(true);
   }, []);
@@ -42,7 +42,7 @@ const HomePage = () => {
               fontFamily: 'Dancing Script',
               fontWeight: 'bold',
               textAlign: 'left',
-              ml: '10%',
+              ml: '12%',
               fontSize: '4.5rem',
             }}
             variant="h2"
@@ -59,7 +59,7 @@ const HomePage = () => {
             <br />
             I'm Ali.
           </Typography>
-          <Typography variant="subtitle1" color="primary" sx={{ ml: '10%' }}>
+          <Typography variant="subtitle1" color="primary" sx={{ ml: '12%' }}>
             <i>front-end developer</i>
           </Typography>
         </Collapse>
