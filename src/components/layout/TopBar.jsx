@@ -112,7 +112,7 @@ export default function TopBar() {
             <ListItemIcon>
               <Email fontSize="small" />
             </ListItemIcon>
-            alirazipur2001@gmail.com
+            razipurali@gmail.com
           </MenuItem>
           <MenuItem>
             <ListItemIcon>

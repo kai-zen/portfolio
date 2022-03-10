@@ -18,7 +18,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="HTML" number={80} />
+          <CircularPercent text="HTML" number={90} />
         </Grid>
         <Grid
           xs={6}
@@ -46,7 +46,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Javascript" number={55} />
+          <CircularPercent text="Javascript" number={75} />
         </Grid>
         <Grid
           xs={6}
@@ -60,7 +60,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="React" number={65} />
+          <CircularPercent text="React" number={75} />
         </Grid>
         <Grid
           xs={6}
@@ -74,7 +74,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Next JS" number={50} />
+          <CircularPercent text="Next JS" number={65} />
         </Grid>
         <Grid
           xs={6}
@@ -88,7 +88,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Bootstrap" number={85} />
+          <CircularPercent text="Bootstrap" number={90} />
         </Grid>
         <Grid
           xs={6}
@@ -102,7 +102,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="MUI" number={70} />
+          <CircularPercent text="MUI" number={90} />
         </Grid>
         <Grid
           xs={6}
@@ -116,7 +116,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Git" number={25} />
+          <CircularPercent text="Git" number={40} />
         </Grid>
         <Grid
           xs={6}
@@ -130,7 +130,7 @@ const SkillsGrid = () => {
             justifyContent: 'center',
           }}
         >
-          <CircularPercent text="Redux" number={70} />
+          <CircularPercent text="Redux" number={80} />
         </Grid>
       </Grid>
     </Grid>
