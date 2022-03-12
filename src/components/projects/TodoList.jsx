@@ -44,7 +44,7 @@ const ToDo = () => {
           <br />
           <Link
             onClick={() => {
-              window.open('https://food-palace-2.netlify.app', '_blank');
+              window.open('https://github.com/kai-zen/todo-list', '_blank');
             }}
             sx={{ cursor: 'pointer' }}
           >
@@ -53,7 +53,14 @@ const ToDo = () => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained">Visit</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open('https://my-todo-list-redux.netlify.app/', '_blank');
+          }}
+        >
+          Visit
+        </Button>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
