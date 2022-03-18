@@ -48,6 +48,20 @@ const SkillsGrid = () => {
         >
           <CircularPercent text="Javascript" number={75} />
         </Grid>
+		<Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="Typescript" number={70} />
+        </Grid>
         <Grid
           xs={6}
           sm={4}
@@ -131,6 +145,20 @@ const SkillsGrid = () => {
           }}
         >
           <CircularPercent text="Redux" number={80} />
+        </Grid>
+		<Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="Mongoose" number={70} />
         </Grid>
       </Grid>
     </Grid>
