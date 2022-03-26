@@ -174,76 +174,76 @@ const SkillsGrid = () => {
         >
           <CircularPercent text="Mongoose" number={70} />
         </Grid>
-      </Grid>
-      <Grid
-        xs={6}
-        sm={4}
-        md={3}
-        sx={{
-          mt: 2,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <CircularPercent text="JWT" number={100} />
-      </Grid>
-      <Grid
-        xs={6}
-        sm={4}
-        md={3}
-        sx={{
-          mt: 2,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <CircularPercent text="Formik" number={95} />
-      </Grid>
-      <Grid
-        xs={6}
-        sm={4}
-        md={3}
-        sx={{
-          mt: 2,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <CircularPercent text="GSAP" number={100} />
-      </Grid>
-      <Grid
-        xs={6}
-        sm={4}
-        md={3}
-        sx={{
-          mt: 2,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <CircularPercent text="JWT" number={100} />
-      </Grid>
-      <Grid
-        xs={6}
-        sm={4}
-        md={3}
-        sx={{
-          mt: 2,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <CircularPercent text="PWA" number={75} />
+        <Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="JWT" number={100} />
+        </Grid>
+        <Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="Formik" number={95} />
+        </Grid>
+        <Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="GSAP" number={100} />
+        </Grid>
+        <Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="JWT" number={100} />
+        </Grid>
+        <Grid
+          xs={6}
+          sm={4}
+          md={3}
+          sx={{
+            mt: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularPercent text="PWA" number={75} />
+        </Grid>
       </Grid>
     </Grid>
   );
