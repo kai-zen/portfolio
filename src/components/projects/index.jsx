@@ -15,6 +15,7 @@ import Crypto from './Crypto';
 import FoodPalace from './FoodPalace';
 import MainCard from './MainCard';
 import ToDo from './TodoList';
+import SassResturant from './SassResturant';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -24,17 +25,20 @@ const Projects = () => {
   const [checked3, setChecked3] = useState(false);
   const [checked4, setChecked4] = useState(false);
   const [checked5, setChecked5] = useState(false);
+  const [checked6, setChecked6] = useState(false);
   useEffect(() => {
     setChecked(false);
     setChecked2(false);
     setChecked3(false);
     setChecked4(false);
-	setChecked5(false);
+    setChecked5(false);
+    setChecked6(false);
     project === 1 && setChecked(true);
     project === 2 && setChecked2(true);
     project === 3 && setChecked3(true);
     project === 4 && setChecked4(true);
     project === 5 && setChecked5(true);
+    project === 6 && setChecked5(true);
   }, [project]);
 
   return (
@@ -162,6 +166,23 @@ const Projects = () => {
             >
               5
             </Fab>
+            <Fab
+              variant="extended"
+              size="small"
+              sx={{
+                mr: 1,
+                mb: 1,
+                width: { xs: '34px', sm: '48px' },
+                height: { xs: '34px', sm: '48px' },
+                borderRadius: '50%',
+              }}
+              onClick={() => {
+                setProject(6);
+              }}
+              color={project === 6 && 'primary'}
+            >
+              6
+            </Fab>
           </Grid>
           <Grid item xs={12} sm={9} md={8}>
             <Collapse in={checked} {...(checked ? { timeout: 2000 } : {})}>
@@ -178,6 +199,9 @@ const Projects = () => {
             </Collapse>
             <Collapse in={checked5} {...(checked5 ? { timeout: 2000 } : {})}>
               <CarShop />
+            </Collapse>
+            <Collapse in={checked6} {...(checked6 ? { timeout: 2000 } : {})}>
+              <SassResturant />
             </Collapse>
           </Grid>
         </Grid>
