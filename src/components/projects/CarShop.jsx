@@ -23,7 +23,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const Crypto = () => {
+const CarShop = () => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -32,20 +32,17 @@ const Crypto = () => {
 
   return (
     <Card>
-      <CardHeader
-        title="3. Crypto price tracker"
-        subheader="December 1, 2021"
-      />
-      <CardMedia component="img" image="/images/crypto.png" />
+      <CardHeader title="5. Car shop first page" subheader="October 17, 2020" />
+      <CardMedia component="img" image="/images/car.png" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          My first experience working with APIs
+          My training project with Bootstrap
           <br />
           <br />
           <Link
             onClick={() => {
               window.open(
-                'https://github.com/kai-zen/crypto-tracker',
+                'https://github.com/kai-zen/bootstrap-car-shop',
                 '_blank'
               );
             }}
@@ -59,7 +56,7 @@ const Crypto = () => {
         <Button
           variant="contained"
           onClick={() => {
-            window.open('https://github.com/kai-zen/crypto-tracker', '_blank');
+            window.open('https://bootstrap-car-shop.netlify.app/', '_blank');
           }}
         >
           Visit
@@ -77,16 +74,18 @@ const Crypto = () => {
         <CardContent>
           <Typography paragraph>About this project:</Typography>
           <Typography paragraph>
-            I didn't have any experience with APIs so it was more like a
-            practice than a project.
+            This project was deploying in 2020 during the course I was watching
+            at toplearn.com
             <br />
-            Styling and UI are all only CSS and HTML.
+            Everything is just made by Bootstrap4 with the minimum amount of css
+            and javascript.
           </Typography>
           <Box>
-            <Chip label="React.js" sx={{ mr: 1, mb: 1 }} size="small" />
             <Chip label="CSS" sx={{ mr: 1, mb: 1 }} size="small" />
             <Chip label="HTML" sx={{ mr: 1, mb: 1 }} size="small" />
-            <Chip label="axios" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="jQuery" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="Javascript" sx={{ mr: 1, mb: 1 }} size="small" />
+            <Chip label="Bootstrap" sx={{ mr: 1, mb: 1 }} size="small" />
           </Box>
         </CardContent>
       </Collapse>
@@ -94,4 +93,4 @@ const Crypto = () => {
   );
 };
 
-export default Crypto;
+export default CarShop;

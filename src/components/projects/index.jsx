@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import CarShop from './CarShop';
 import Crypto from './Crypto';
 import FoodPalace from './FoodPalace';
 import MainCard from './MainCard';
@@ -22,6 +23,7 @@ const Projects = () => {
   const [checked2, setChecked2] = useState(false);
   const [checked3, setChecked3] = useState(false);
   const [checked4, setChecked4] = useState(false);
+  const [checked5, setChecked5] = useState(false);
   useEffect(() => {
     setChecked(false);
     setChecked2(false);
@@ -31,6 +33,7 @@ const Projects = () => {
     project === 2 && setChecked2(true);
     project === 3 && setChecked3(true);
     project === 4 && setChecked4(true);
+    project === 5 && setChecked5(true);
   }, [project]);
 
   return (
@@ -141,6 +144,23 @@ const Projects = () => {
             >
               4
             </Fab>
+            <Fab
+              variant="extended"
+              size="small"
+              sx={{
+                mr: 1,
+                mb: 1,
+                width: { xs: '34px', sm: '48px' },
+                height: { xs: '34px', sm: '48px' },
+                borderRadius: '50%',
+              }}
+              onClick={() => {
+                setProject(5);
+              }}
+              color={project === 5 && 'primary'}
+            >
+              5
+            </Fab>
           </Grid>
           <Grid item xs={12} sm={9} md={8}>
             <Collapse in={checked} {...(checked ? { timeout: 2000 } : {})}>
@@ -154,6 +174,9 @@ const Projects = () => {
             </Collapse>
             <Collapse in={checked4} {...(checked4 ? { timeout: 2000 } : {})}>
               <ToDo />
+            </Collapse>
+            <Collapse in={checked5} {...(checked5 ? { timeout: 2000 } : {})}>
+              <CarShop />
             </Collapse>
           </Grid>
         </Grid>
