@@ -38,7 +38,7 @@ const Projects = () => {
     project === 3 && setChecked3(true);
     project === 4 && setChecked4(true);
     project === 5 && setChecked5(true);
-    project === 6 && setChecked5(true);
+    project === 6 && setChecked6(true);
   }, [project]);
 
   return (
