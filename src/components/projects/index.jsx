@@ -217,10 +217,10 @@ const Projects = () => {
         }}
         startIcon={<ChevronLeft />}
         onClick={() => {
-          navigate('/Skills');
+          navigate('/Work-experience');
         }}
       >
-        Skills
+        Work exp
       </Button>
     </Paper>
   );

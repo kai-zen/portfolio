@@ -1,11 +1,12 @@
 import { ThemeProvider } from '@emotion/react';
 import HomePage from './components/Home';
 import { createTheme } from '@mui/material';
-import { amber, cyan } from '@mui/material/colors';
+import { cyan } from '@mui/material/colors';
 import Layout from './components/layout';
 import Projects from './components/projects';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 import Skills from './components/skills';
+import Dobaare from './components/dobaare/index';
 
 function App() {
   const theme = createTheme({
@@ -14,9 +15,9 @@ function App() {
       primary: {
         main: cyan[400],
       },
-      secondary: {
-        main: amber[600],
-      },
+      // secondary: {
+      //   main: pink[300],
+      // },
     },
     typography: {
       allVariants: {
@@ -25,16 +26,17 @@ function App() {
     },
   });
   return (
-    <HashRouter>
+    <Router>
       <ThemeProvider theme={theme}>
         <Layout />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Work-experience" element={<Dobaare />} />
           <Route path="/Skills" element={<Skills />} />
         </Routes>
       </ThemeProvider>
-    </HashRouter>
+    </Router>
   );
 }
 

@@ -43,7 +43,7 @@ const HomePage = () => {
               fontWeight: 'bold',
               textAlign: 'left',
               ml: '12%',
-              fontSize: '4.5rem',
+              fontSize: { md: '5rem', sm: '4.5rem', xs: '4.2rem' },
             }}
             variant="h2"
           >

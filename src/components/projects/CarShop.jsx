@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -9,8 +8,9 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button, Chip, Link } from '@mui/material';
+import { Button, Chip, Link, Skeleton } from '@mui/material';
 import { Box } from '@mui/system';
+import { useEffect, useState } from 'react';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -24,7 +24,14 @@ const ExpandMore = styled((props) => {
 }));
 
 const CarShop = () => {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  });
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -33,62 +40,77 @@ const CarShop = () => {
   return (
     <Card>
       <CardHeader title="5. Car shop first page" subheader="October 17, 2020" />
-      <CardMedia component="img" image="/images/car.png" />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          My training project with Bootstrap
-          <br />
-          <br />
-          <Link
-            onClick={() => {
-              window.open(
-                'https://github.com/kai-zen/bootstrap-car-shop',
-                '_blank'
-              );
-            }}
-            sx={{ cursor: 'pointer' }}
-          >
-            Source code
-          </Link>
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <Button
-          variant="contained"
-          onClick={() => {
-            window.open('https://bootstrap-car-shop.netlify.app/', '_blank');
-          }}
-        >
-          Visit
-        </Button>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>About this project:</Typography>
-          <Typography paragraph>
-            This project was deploying in 2020 during the course I was watching
-            at toplearn.com
-            <br />
-            Everything is just made by Bootstrap4 with the minimum amount of css
-            and javascript.
-          </Typography>
-          <Box>
-            <Chip label="CSS" sx={{ mr: 1, mb: 1 }} size="small" />
-            <Chip label="HTML" sx={{ mr: 1, mb: 1 }} size="small" />
-            <Chip label="jQuery" sx={{ mr: 1, mb: 1 }} size="small" />
-            <Chip label="Javascript" sx={{ mr: 1, mb: 1 }} size="small" />
-            <Chip label="Bootstrap" sx={{ mr: 1, mb: 1 }} size="small" />
-          </Box>
-        </CardContent>
-      </Collapse>
+      {loading ? (
+        <Skeleton
+          id="skeleton"
+          animation="wave"
+          variant="rectangle"
+          width="100%"
+          height="550px"
+        />
+      ) : (
+        <>
+          <CardMedia component="img" image="/images/car.png" />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              My training project with Bootstrap
+              <br />
+              <br />
+              <Link
+                onClick={() => {
+                  window.open(
+                    'https://github.com/kai-zen/bootstrap-car-shop',
+                    '_blank'
+                  );
+                }}
+                sx={{ cursor: 'pointer' }}
+              >
+                Source code
+              </Link>
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <Button
+              variant="contained"
+              onClick={() => {
+                window.open(
+                  'https://bootstrap-car-shop.netlify.app/',
+                  '_blank'
+                );
+              }}
+            >
+              Visit
+            </Button>
+            <ExpandMore
+              expand={expanded}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography paragraph>About this project:</Typography>
+              <Typography paragraph>
+                This project was deploying in 2020 during the course I was
+                watching at toplearn.com
+                <br />
+                Everything is just made by Bootstrap4 with the minimum amount of
+                css and javascript.
+              </Typography>
+              <Box>
+                <Chip label="CSS" sx={{ mr: 1, mb: 1 }} size="small" />
+                <Chip label="HTML" sx={{ mr: 1, mb: 1 }} size="small" />
+                <Chip label="jQuery" sx={{ mr: 1, mb: 1 }} size="small" />
+                <Chip label="Javascript" sx={{ mr: 1, mb: 1 }} size="small" />
+                <Chip label="Bootstrap" sx={{ mr: 1, mb: 1 }} size="small" />
+              </Box>
+            </CardContent>
+          </Collapse>
+        </>
+      )}
     </Card>
   );
 };
