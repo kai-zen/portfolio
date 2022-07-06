@@ -5,11 +5,13 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import Landing from './Landing';
+import PWA from './PWA';
+import Panel from './Panel';
 
 const Dobaare = () => {
   const navigate = useNavigate();
 
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(2);
   return (
     <Paper
       sx={{
@@ -34,6 +36,17 @@ const Dobaare = () => {
             <Divider sx={{ width: '100%' }} />
             <Divider sx={{ width: '100%' }} />
             <Divider sx={{ width: '100%' }} />
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography
+            variant="h6"
+            sx={{
+              ml: { sm: '10%' },
+              textAlign: { xs: 'center', sm: 'left' },
+            }}
+          >
+            Dobaare project consists of 3 main parts:
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -81,6 +94,28 @@ const Dobaare = () => {
             }}
           >
             <Landing />
+          </Grid>
+        )}
+        {active === 2 && (
+          <Grid
+            item
+            xs={12}
+            sx={{
+              m: { xs: '20px', sm: '10px calc(15% + 80px)' },
+            }}
+          >
+            <PWA />
+          </Grid>
+        )}
+        {active === 3 && (
+          <Grid
+            item
+            xs={12}
+            sx={{
+              m: { xs: '20px', sm: '20px 10%' },
+            }}
+          >
+            <Panel />
           </Grid>
         )}
 

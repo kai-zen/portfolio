@@ -2,234 +2,44 @@ import { Grid } from '@mui/material';
 import CircularPercent from './CircularPercent';
 
 const SkillsGrid = () => {
+  const data = [
+    { text: 'HTML', number: '95' },
+    { text: 'CSS', number: '95' },
+    { text: 'Sass', number: '100' },
+    { text: 'Bootstrap', number: '95' },
+    { text: 'TailwindCSS', number: '85' },
+    { text: 'Javascript', number: '80' },
+    { text: 'Typescript', number: '70' },
+    { text: 'jQuery', number: '80' },
+    { text: 'React JS', number: '85' },
+    { text: 'MUI', number: '90' },
+    { text: 'Redux', number: '80' },
+    { text: 'Next JS', number: '70' },
+    { text: 'Mongoose', number: '75' },
+    { text: 'Webpack', number: '60' },
+    { text: 'React-query', number: '75' },
+    { text: 'PWA', number: '90' },
+  ];
   return (
     <Grid item container xs={12} spacing={2}>
       <Grid item xs={0} md={1} />
       <Grid item container md={10}>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="HTML" number={90} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="CSS" number={90} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Javascript" number={75} />
-        </Grid>
-		<Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="jQuery" number={80} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Typescript" number={70} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="SASS/SCSS" number={100} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="React" number={75} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Next JS" number={65} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Bootstrap" number={90} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="MUI" number={90} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Git" number={50} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Redux" number={80} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Mongoose" number={70} />
-        </Grid>
-		<Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="Webpack" number={60} />
-        </Grid>
-		<Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="React-query" number={75} />
-        </Grid>
-        <Grid
-          xs={6}
-          sm={4}
-          md={3}
-          sx={{
-            mt: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <CircularPercent text="PWA" number={75} />
-        </Grid>
+        {data.map((item) => (
+          <Grid
+            xs={6}
+            sm={4}
+            md={3}
+            sx={{
+              mt: 2,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <CircularPercent text={item.text} number={item.number} />
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );

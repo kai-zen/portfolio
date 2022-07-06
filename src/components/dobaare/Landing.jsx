@@ -20,7 +20,10 @@ const Landing = () => {
   });
   return (
     <Card width="100%">
-      <CardHeader title="1. Dobaare Landing page" subheader="May 30, 2022" />
+      <CardHeader
+        title="1. Dobaare Landing page (Scroll the image)"
+        subheader="May 30, 2022"
+      />
       {loading ? (
         <Skeleton
           animation="wave"
