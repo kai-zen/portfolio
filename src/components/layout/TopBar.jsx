@@ -5,7 +5,7 @@ import {
   Phone,
   Snowboarding,
   Sort,
-} from '@mui/icons-material';
+} from "@mui/icons-material";
 import {
   AppBar,
   Divider,
@@ -15,9 +15,9 @@ import {
   MenuItem,
   Toolbar,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
+} from "@mui/material";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function TopBar() {
   const navigate = useNavigate();
@@ -30,24 +30,24 @@ export default function TopBar() {
     setAnchorEl(null);
   };
   return (
-    <AppBar sx={{ background: 'none' }} elevation={0}>
+    <AppBar sx={{ background: "none" }} elevation={0}>
       <Toolbar
         sx={{
-          width: '80%',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
+          width: "80%",
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            color: '#fff',
-            fontSize: '1.3rem',
-            fontFamily: 'Dancing Script',
-            cursor: 'pointer',
+            color: "#fff",
+            fontSize: "1.3rem",
+            fontFamily: "Dancing Script",
+            cursor: "pointer",
           }}
           onClick={() => {
-            navigate('/');
+            navigate("/");
           }}
         >
           Ali Razipur
@@ -55,28 +55,28 @@ export default function TopBar() {
         <IconButton onClick={handleClick}>
           <Sort
             sx={{
-              color: '#fff',
-              fontSize: '2rem',
+              color: "#fff",
+              fontSize: "2rem",
             }}
           />
         </IconButton>
         <Menu
           id="basic-menu"
-          sx={{ textAlign: 'center' }}
+          sx={{ textAlign: "center" }}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
           MenuListProps={{
-            'aria-labelledby': 'basic-button',
+            "aria-labelledby": "basic-button",
           }}
           transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
+            vertical: "top",
+            horizontal: "right",
           }}
         >
           <MenuItem
             onClick={() => {
-              navigate('/');
+              navigate("/");
               handleClose();
             }}
           >
@@ -87,7 +87,7 @@ export default function TopBar() {
           </MenuItem>
           <MenuItem
             onClick={() => {
-              navigate('/projects');
+              navigate("/projects");
               handleClose();
             }}
           >
@@ -98,7 +98,7 @@ export default function TopBar() {
           </MenuItem>
           <MenuItem
             onClick={() => {
-              navigate('/skills');
+              navigate("/skills");
               handleClose();
             }}
           >
@@ -118,7 +118,7 @@ export default function TopBar() {
             <ListItemIcon>
               <Phone fontSize="small" />
             </ListItemIcon>
-            +98 991 716 6019
+            +98 933 890 6524
           </MenuItem>
         </Menu>
       </Toolbar>
