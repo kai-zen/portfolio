@@ -19,7 +19,7 @@ export const projectsData = [
     title: "Dobaare",
     subprojects: [
       {
-        title: "Admin panel",
+        title: "Panel",
         address: "http://panel.dobaare.com",
         stack: ["React", "Tailwind", "Redux"],
       },
@@ -50,7 +50,7 @@ export const projectsData = [
         stack: ["React", "Sass", "Redux"],
       },
       {
-        title: "ReactNative mobile app",
+        title: "Mobile app",
         address:
           "https://play.google.com/store/apps/details?id=com.clientjibapp",
         stack: ["React Native", "Redux"],
@@ -75,7 +75,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Hadid HR management",
+    title: "Hadid HRM",
     subprojects: [
       {
         title: "PWA",
@@ -83,7 +83,7 @@ export const projectsData = [
         stack: ["React", "Material UI", "Redux"],
       },
       {
-        title: "Admin panel",
+        title: "Panel",
         address: false,
         stack: ["React", "Material UI", "Redux"],
       },
@@ -91,7 +91,7 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: "Luna clothes shop",
+    title: "Luna shop",
     subprojects: [
       {
         title: "PWA",
@@ -99,7 +99,7 @@ export const projectsData = [
         stack: ["Next JS", "Tailwind", "Typesctipt", "Redux"],
       },
       {
-        title: "Admin panel",
+        title: "Panel",
         address: "https://github.com/kai-zen/luna_panel",
         stack: ["React", "Material UI", "GraphQL", "Redux"],
       },
@@ -107,15 +107,15 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: "Food Palace v2",
+    title: "Food Palace 2",
     subprojects: [
       {
-        title: "PWA with React",
+        title: "PWA (React)",
         address: "https://food-palace-2.netlify.app",
         stack: ["React", "Javascript", "Material UI", "Redux"],
       },
       {
-        title: "Fullstack CMS with Next JS",
+        title: "Fullstack CMS",
         address: "https://github.com/kai-zen/next-food-palace-2",
         stack: ["Next JS", "Material UI", "Redux", "MongoDB", "mongoose"],
       },
@@ -134,10 +134,10 @@ export const projectsData = [
   },
   {
     id: 8,
-    title: "Boring to do list",
+    title: "ToDo list",
     subprojects: [
       {
-        title: "Todo list with Redux",
+        title: "ToDo list",
         address: "https://my-todo-list-redux.netlify.app",
         stack: ["React", "CSS", "Redux"],
       },

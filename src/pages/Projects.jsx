@@ -1,4 +1,6 @@
-import { Paper } from "@mui/material";
+import { Box, Paper } from "@mui/material";
+import { projectsData } from "../assets/constants";
+import Project from "../components/projects/Project";
 
 const Projects = () => {
   return (
@@ -10,7 +12,19 @@ const Projects = () => {
       }}
       elevation={4}
     >
-      <p>projects</p>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 7,
+          px: "12%",
+          my: "80px",
+        }}
+      >
+        {projectsData.map((project) => (
+          <Project data={project} />
+        ))}
+      </Box>
     </Paper>
   );
 };
