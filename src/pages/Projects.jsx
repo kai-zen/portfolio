@@ -1,4 +1,4 @@
-import { Box, Paper } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
 import { projectsData } from "../assets/constants";
 import Project from "../components/projects/Project";
 
@@ -10,15 +10,30 @@ const Projects = () => {
         pb: "100px",
         minHeight: "100vh",
       }}
-      elevation={4}
+      elevation={0}
     >
+      <Typography
+        variant="h3"
+        sx={{
+          px: { sm: "10%" },
+          textAlign: { xs: "center", sm: "left" },
+          fontFamily: "Dancing Script",
+          mt: "40px",
+          mb: "20px",
+        }}
+        color="primary"
+      >
+        My Projects
+        <Divider sx={{ width: "100%" }} />
+        <Divider sx={{ width: "100%" }} />
+        <Divider sx={{ width: "100%" }} />
+      </Typography>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           gap: 7,
           px: "12%",
-          my: "80px",
         }}
       >
         {projectsData.map((project) => (

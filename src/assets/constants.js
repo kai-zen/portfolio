@@ -144,3 +144,51 @@ export const projectsData = [
     ],
   },
 ];
+
+export const mainSkills = [
+  { text: "HTML", number: "95" },
+  { text: "CSS", number: "95" },
+  { text: "Javascript", number: "80" },
+  { text: "React JS", number: "85" },
+];
+
+const otherSkills = [
+  "Typescript",
+  "Next JS",
+  "React Native",
+  "Sass",
+  "Git/Github/Gitlab",
+];
+
+const softSkills = [
+  "Responsibility",
+  "Teamwork",
+  "Crisis Management",
+  "Creativity & ideation",
+  "Problem solving",
+  "Planning",
+  "Train & learning",
+];
+
+const libraries = [
+  "Material UI",
+  "Tailwind",
+  "Redux",
+  "Bootstrap",
+  "React query",
+];
+
+export const skillsSections = [
+  {
+    title: "Other skills",
+    data: otherSkills,
+  },
+  {
+    title: "Soft skills",
+    data: softSkills,
+  },
+  {
+    title: "Libraries",
+    data: libraries,
+  },
+];

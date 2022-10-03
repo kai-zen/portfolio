@@ -13,7 +13,7 @@ const HomePage = () => {
       <Box
         sx={{
           position: "relative",
-          backgroundImage: 'url("./images/bkg.png")',
+          backgroundImage: 'url("./images/bkg.jpg")',
           backgroundPosition: "60% 0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

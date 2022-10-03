@@ -1,5 +1,6 @@
-import { Divider, Grid, Paper, Typography } from "@mui/material";
-import SkillsGrid from "../components/skills/SkillsGrid";
+import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
+import { skillsSections } from "../assets/constants";
+import MainSkills from "../components/skills/MainSkills";
 
 const Skills = () => {
   return (
@@ -10,25 +11,47 @@ const Skills = () => {
         minHeight: "100vh",
       }}
       square
+      elevation={0}
     >
-      <Grid container spacing={3} sx={{ mt: { xs: 1, sm: 3 } }}>
-        <Grid item xs={12}>
-          <Typography
-            variant="h3"
+      <Typography
+        variant="h3"
+        sx={{
+          px: { sm: "10%" },
+          textAlign: { xs: "center", sm: "left" },
+          fontFamily: "Dancing Script",
+          mt: "40px",
+          mb: "20px",
+        }}
+        color="primary"
+      >
+        My Skills
+        <Divider sx={{ width: "100%" }} />
+        <Divider sx={{ width: "100%" }} />
+        <Divider sx={{ width: "100%" }} />
+      </Typography>
+      <Grid container spacing={3}>
+        <MainSkills />
+        {skillsSections.map((section) => (
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
             sx={{
-              ml: { sm: "10%" },
-              textAlign: { xs: "center", sm: "left" },
-              fontFamily: "Dancing Script",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              gap: 2,
             }}
-            color="primary"
           >
-            My Skills
-            <Divider sx={{ width: "100%" }} />
-            <Divider sx={{ width: "100%" }} />
-            <Divider sx={{ width: "100%" }} />
-          </Typography>
-        </Grid>
-        <SkillsGrid />
+            <Typography variant="h4">{section.title}</Typography>
+            <Box>
+              {section.data.map((item) => (
+                <Typography>● {item}</Typography>
+              ))}
+            </Box>
+          </Grid>
+        ))}
       </Grid>
     </Paper>
   );
