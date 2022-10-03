@@ -1,20 +1,15 @@
-import { ChevronLeft } from "@mui/icons-material";
-import { Button, Collapse, Typography } from "@mui/material";
+import { Collapse, Typography } from "@mui/material";
 import { cyan } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
-import MyLayout from "../components/layout";
 
 const HomePage = () => {
-  const navigate = useNavigate();
   const [checked, setChecked] = useState(false);
   useEffect(() => {
     setChecked(true);
   }, []);
   return (
     <>
-      <MyLayout />
       <Box
         sx={{
           position: "relative",
@@ -63,22 +58,6 @@ const HomePage = () => {
             <i>front-end developer</i>
           </Typography>
         </Collapse>
-        <Button
-          variant="outlined"
-          size="large"
-          sx={{
-            position: "fixed",
-            left: "10%",
-            bottom: "5%",
-            zIndex: "3",
-          }}
-          startIcon={<ChevronLeft />}
-          onClick={() => {
-            navigate("/Projects");
-          }}
-        >
-          Projects
-        </Button>
       </Box>
     </>
   );

@@ -1,10 +1,7 @@
-import { ChevronLeft } from "@mui/icons-material";
-import { Button, Divider, Grid, Paper, Typography } from "@mui/material";
-import { useNavigate } from "react-router";
+import { Divider, Grid, Paper, Typography } from "@mui/material";
 import SkillsGrid from "../components/skills/SkillsGrid";
 
 const Skills = () => {
-  const navigate = useNavigate();
   return (
     <Paper
       sx={{
@@ -33,22 +30,6 @@ const Skills = () => {
         </Grid>
         <SkillsGrid />
       </Grid>
-      <Button
-        variant="outlined"
-        size="large"
-        sx={{
-          position: "fixed",
-          left: "10%",
-          bottom: "5%",
-          zIndex: "3",
-        }}
-        startIcon={<ChevronLeft />}
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Home
-      </Button>
     </Paper>
   );
 };

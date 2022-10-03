@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import Layout from "./components/layout";
-import { Routes, Route, HashRouter as Router } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { theme } from "./assets/customTheme";
 import { Home, Projects, Skills } from "./pages";
 
@@ -11,8 +11,8 @@ function App() {
         <Layout />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
         </Routes>
       </ThemeProvider>
     </Router>
