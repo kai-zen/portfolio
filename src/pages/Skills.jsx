@@ -1,49 +1,16 @@
-import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import { skillsSections } from "../assets/constants";
-import MainSkills from "../components/skills/MainSkills";
+import { PageTitle } from "../components/common";
+import { MainSkills } from "../components/skills";
 
 const Skills = () => {
   return (
-    <Paper
-      sx={{
-        p: "30px",
-        pb: "100px",
-        minHeight: "100vh",
-      }}
-      square
-      elevation={0}
-    >
-      <Typography
-        variant="h3"
-        sx={{
-          px: { sm: "10%" },
-          textAlign: { xs: "center", sm: "left" },
-          fontFamily: "Dancing Script",
-          mt: "40px",
-          mb: "20px",
-        }}
-        color="primary"
-      >
-        My Skills
-        <Divider sx={{ width: "100%" }} />
-        <Divider sx={{ width: "100%" }} />
-        <Divider sx={{ width: "100%" }} />
-      </Typography>
+    <Paper sx={styles.container} elevation={0}>
+      <PageTitle title="My Skills" />
       <Grid container spacing={3}>
         <MainSkills />
         {skillsSections.map((section) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              gap: 2,
-            }}
-          >
+          <Grid item xs={12} sm={6} md={4} sx={styles.skillsSection}>
             <Typography variant="h4">{section.title}</Typography>
             <Box>
               {section.data.map((item) => (
@@ -55,6 +22,20 @@ const Skills = () => {
       </Grid>
     </Paper>
   );
+};
+
+const styles = {
+  container: {
+    p: "30px",
+    pb: "100px",
+    minHeight: "100vh",
+  },
+  skillsSection: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    gap: 2,
+  },
 };
 
 export default Skills;
