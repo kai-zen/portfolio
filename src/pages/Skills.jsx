@@ -1,9 +1,14 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
+import { useEffect } from "react";
 import { skillsSections } from "../assets/constants";
 import { PageTitle } from "../components/common";
 import { MainSkills } from "../components/skills";
 
 const Skills = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Paper sx={styles.container} elevation={0}>
       <PageTitle title="My Skills" />

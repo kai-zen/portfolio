@@ -1,9 +1,14 @@
 import { Box, Paper } from "@mui/material";
+import { useEffect } from "react";
 import { projectsData } from "../assets/constants";
 import { PageTitle } from "../components/common";
 import { Project } from "../components/projects";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Paper sx={styles.container} elevation={0}>
       <PageTitle title="My Projects" />

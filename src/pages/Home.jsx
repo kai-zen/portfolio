@@ -7,6 +7,7 @@ const HomePage = () => {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setChecked(true);
   }, []);
 
