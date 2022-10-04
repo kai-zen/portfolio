@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import Layout from "./components/layout";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route, HashRouter as Router } from "react-router-dom";
 import { theme } from "./assets/customTheme";
 import { Home, Projects, Skills } from "./pages";
 
