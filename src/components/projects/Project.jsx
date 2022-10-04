@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Chip, Grid, Link, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Project = ({ data }) => {
@@ -18,8 +18,11 @@ const Project = ({ data }) => {
         }}
       >
         {subprojects.map((item) => (
-          <Box>
-            <Typography sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Box sx={{ mb: 2 }}>
+            <Typography
+              sx={{ display: "flex", alignItems: "center", gap: 2 }}
+              variant="h6"
+            >
               <ArrowForwardIcon color="primary" />
               {item.title}:{" "}
               <Link
@@ -31,6 +34,11 @@ const Project = ({ data }) => {
                 {item.address}
               </Link>
             </Typography>
+            <Grid container sx={{ display: "flex", gap: 1, mt: 1 }}>
+              {item.stack.map((technology) => (
+                <Chip label={technology} key={technology} size="small" />
+              ))}
+            </Grid>
           </Box>
         ))}
       </Box>
