@@ -1,4 +1,4 @@
-import { Box, Chip, Grid, Link, Typography } from "@mui/material";
+import { Badge, Box, Chip, Grid, Link, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Project = ({ data }) => {
@@ -14,14 +14,20 @@ const Project = ({ data }) => {
             <Typography sx={styles.subprojects.title} variant="h6">
               <ArrowForwardIcon color="primary" />
               {item.title}:{" "}
-              <Link
-                onClick={() => {
-                  window.open(item.address, "_blank");
-                }}
-                sx={styles.subprojects.link}
-              >
-                {item.address}
-              </Link>
+              {item.address ? (
+                <Link
+                  onClick={() => {
+                    window.open(item.address, "_blank");
+                  }}
+                  sx={styles.subprojects.link}
+                >
+                  {item.address}
+                </Link>
+              ) : (
+                <Badge badgeContent="soon" color="primary">
+                  <i>Is developing...</i>
+                </Badge>
+              )}
             </Typography>
             <Grid container sx={styles.subprojects.stackContainer}>
               {item.stack.map((technology) => (

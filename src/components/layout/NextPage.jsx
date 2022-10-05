@@ -13,7 +13,6 @@ const NextPage = () => {
   const [nextPath, setNextPath] = useState(pages[1].path);
 
   useEffect(() => {
-    console.log(location.pathname);
     switch (location.pathname) {
       case "/":
         setNextTitle(pages[1].title);
